@@ -11,6 +11,7 @@ switch state_step
         player_auto()
         qu_wait(1)
         global.elevator_fight_room = get_room_id(270, 1)
+        global.minit_time = global.playtime + 30
         break
     case 2:
         process_loop_lab_elevator(128, 128)

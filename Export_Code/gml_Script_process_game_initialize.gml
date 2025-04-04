@@ -1,5 +1,6 @@
 audio_group_load(1)
 global.playtime = 0
+global.minit_time = 0
 global.vacant_suit_room = -1
 global.vacant_suit_x = undefined
 global.vacant_suit_y = undefined

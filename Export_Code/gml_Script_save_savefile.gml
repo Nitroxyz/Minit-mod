@@ -28,7 +28,7 @@ if (!global.center_player_position)
 }
 else
 {
-    ds_map_set(map, "spawn_x", string(152))
+    ds_map_set(map, "spawn_x", "152")
     ds_map_set(map, "spawn_y", string(obj_player.y))
     global.center_player_position = 0
 }
@@ -40,6 +40,7 @@ ds_map_set(map, "collected", global.items_collected)
 ds_map_set(map, "events", global.events_completed)
 ds_map_set(map, "completion", string_format((100 * global.items_collected / 32), 1, 1))
 ds_map_set(map, "playtime", global.playtime)
+global.minit_time = global.playtime
 ds_map_set(map, "success", 0)
 ds_map_set(map, "water_level", global.water_level)
 ds_map_set(map, "lava_cooled", global.lava_cooled)

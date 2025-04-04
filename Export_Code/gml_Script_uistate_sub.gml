@@ -1,6 +1,8 @@
 draw_set_colour(c_white)
 draw_set_halign(fa_center)
 draw_set_font(fnt_nesultra)
+var _time_left = max((60 + global.minit_time - global.playtime), 0)
+draw_text(33, (30 + global.ui_text_offset), _time_left)
 if (!ui_is_initialized)
 {
     tar_x[0] = 38

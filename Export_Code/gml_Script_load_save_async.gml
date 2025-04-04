@@ -50,7 +50,10 @@ global.hassuit = ds_map_find_value(loaded_data, "hassuit")
 global.items_collected = ds_map_find_value(loaded_data, "collected")
 global.events_completed = ds_map_find_value(loaded_data, "events")
 if ((!global.respawn_mode) && ds_map_exists(loaded_data, "playtime"))
+{
     global.playtime = ds_map_find_value(loaded_data, "playtime")
+    global.minit_time = global.playtime
+}
 var glist = ds_map_find_value(loaded_data, "getlist")
 if ds_exists(global.getlist, 2)
     ds_list_clear(global.getlist)

@@ -95,6 +95,7 @@ else
     ds_map_add(map, "spawn_y", string(global.spawn_y))
 }
 global.playtime = 0
+global.minit_time = 0
 global.items_collected = 0
 global.events_completed = 0
 global.flows_cleared = 0

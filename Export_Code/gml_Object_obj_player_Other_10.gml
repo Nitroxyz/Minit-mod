@@ -3,6 +3,8 @@ if (instance_exists(obj_changeroom) || collision_state == scr_none)
 script_execute(control_state)
 script_execute(move_state)
 script_execute(shoot_state)
+if ((60 + global.minit_time - global.playtime) <= 0)
+    player_take_final_hit()
 if (visible && place_meeting(x, y, obj_enemy))
 {
     var temp = instance_place(x, y, obj_enemy)

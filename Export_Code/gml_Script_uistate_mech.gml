@@ -3,6 +3,8 @@ draw_set_halign(fa_center)
 draw_set_font(global.font[global.language])
 draw_frame2((pos_x[1] - 8 - 3 - 1), 29, (pos_x[1] - 8 + 27 - 1), 59)
 draw_sprite_ext(spr_cat_portrait, global.catmood, (pos_x[1] - 8 - 1 + 24), 32, -1, 1, 0, c_white, 1)
+var _time_left = max((60 + global.minit_time - global.playtime), 0)
+draw_text(33, (30 + global.ui_text_offset), _time_left)
 if (text_talk_index < 4)
 {
     draw_text(214, 5, boot_text[text_talk_index])
