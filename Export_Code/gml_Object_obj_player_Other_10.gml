@@ -3,8 +3,28 @@ if (instance_exists(obj_changeroom) || collision_state == scr_none)
 script_execute(control_state)
 script_execute(move_state)
 script_execute(shoot_state)
-if ((60 + global.minit_time - global.playtime) <= 0)
+var cof = minit_time_calc() * 60 - (max((GAME_MANAGER.second_timer - 1), 0)) - 33
+if (global.minit_reset == 1)
+    cof = round(cof / 60)
+if (((cof <= 600 && round(cof / 60) == (cof / 60)) || (cof <= 180 && round(cof / 15) == (cof / 15))) && (!instance_exists(minit_ItemGot)))
+{
+    if (round(cof / 60) == (cof / 60))
+    {
+        if ((cof / 60) == 0)
+            audio_play_sound(sndClock4, 20, false)
+        else if ((cof / 60) <= 3)
+            audio_play_sound(sndClock3, 20, false)
+        else if ((cof / 60) <= 6)
+            audio_play_sound(sndClock2, 20, false)
+        else
+            audio_play_sound(sndClock1, 20, false)
+    }
+}
+if (global.minit_active == 1 && minit_time_calc() <= 0)
+{
+    global.minit_reset = 0
     player_take_final_hit()
+}
 if (visible && place_meeting(x, y, obj_enemy))
 {
     var temp = instance_place(x, y, obj_enemy)

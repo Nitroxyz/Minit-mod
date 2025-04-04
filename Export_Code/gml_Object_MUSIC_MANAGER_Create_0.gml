@@ -16,3 +16,11 @@ music_gain_multiplier = 1
 current_main_theme = 0
 main_track_position = 0
 current_song_index = undefined
+current_minit_part = 0
+var i = 1
+repeat (4)
+{
+    mus_desert[i] = asset_get_index("musDesert" + string(i))
+    mus_forest[i] = asset_get_index("musForest" + string(i))
+    i++
+}

@@ -96,6 +96,7 @@ else
 }
 global.playtime = 0
 global.minit_time = 0
+global.minit_active = 0
 global.items_collected = 0
 global.events_completed = 0
 global.flows_cleared = 0

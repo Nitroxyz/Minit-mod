@@ -20,9 +20,8 @@ else
     }
     else if (instance_exists(obj_player) && instance_number(obj_door1_U) == 1)
     {
-        music_xfade(MUSIC_MANAGER.current_main_theme, 2000)
-        music_reset_track_position()
-        music_duck(1, 2000)
+        if minit_music_inactive()
+            music_play_main(1)
         player_auto_end()
     }
     instance_destroy()

@@ -484,44 +484,85 @@ switch MAP_MANAGER.map_current
 {
     case "map0":
         if global.decoder_discovered
-            MUSIC_MANAGER.current_main_theme = mu_investigate_ship
+            MUSIC_MANAGER.current_main_theme = 32
         else if (global.hassuit == "no")
-            MUSIC_MANAGER.current_main_theme = mu_cat_exploration
+            MUSIC_MANAGER.current_main_theme = 0
         else
-            MUSIC_MANAGER.current_main_theme = mu_mech_exploration
+            MUSIC_MANAGER.current_main_theme = 1
         break
     case "map1":
         if (global.water_level == 3)
-            MUSIC_MANAGER.current_main_theme = mu_water_drained
+            MUSIC_MANAGER.current_main_theme = 16
         else
-            MUSIC_MANAGER.current_main_theme = mu_water_flooded
+            MUSIC_MANAGER.current_main_theme = 15
         break
     case "map2":
-        MUSIC_MANAGER.current_main_theme = mu_hub
+        MUSIC_MANAGER.current_main_theme = 23
         break
     case "map3":
         if global.lava_cooled
-            MUSIC_MANAGER.current_main_theme = mu_lava_cool
+            MUSIC_MANAGER.current_main_theme = 18
         else
-            MUSIC_MANAGER.current_main_theme = mu_lava_hot
+            MUSIC_MANAGER.current_main_theme = 17
         break
     case "map4":
-        MUSIC_MANAGER.current_main_theme = mu_ventilation
+        MUSIC_MANAGER.current_main_theme = 20
         break
     case "map5":
-        MUSIC_MANAGER.current_main_theme = mu_lab
+        MUSIC_MANAGER.current_main_theme = 25
         break
     case "map6":
         if global.endgame
-            MUSIC_MANAGER.current_main_theme = mu_elevator
+            MUSIC_MANAGER.current_main_theme = 2
         else if (!global.gary_defeated)
-            MUSIC_MANAGER.current_main_theme = mu_lab2
+            MUSIC_MANAGER.current_main_theme = 27
         else
-            MUSIC_MANAGER.current_main_theme = mu_elevator
+            MUSIC_MANAGER.current_main_theme = 2
         break
 }
 
-if instance_exists(obj_save_point)
+if (!minit_music_inactive())
+{
+    if (global.minit_music_mode == 1)
+    {
+        if (MUSIC_MANAGER.current_song_index != 420)
+        {
+            if (MUSIC_MANAGER.current_song_index == MUSIC_MANAGER.current_main_theme)
+                music_write_main_track_position()
+            music_play(musIntro)
+            music_duck(1, 0)
+        }
+    }
+    else
+    {
+        if (global.minit_music_mode == 2)
+        {
+            var new_music = MUSIC_MANAGER.mus_desert[global.minit_music_part]
+            var old_music = MUSIC_MANAGER.mus_desert[MUSIC_MANAGER.current_minit_part]
+        }
+        else
+        {
+            new_music = MUSIC_MANAGER.mus_forest[global.minit_music_part]
+            old_music = MUSIC_MANAGER.mus_forest[MUSIC_MANAGER.current_minit_part]
+        }
+        if (MUSIC_MANAGER.current_minit_part != global.minit_music_part && MUSIC_MANAGER.current_song_index != new_music)
+        {
+            if (MUSIC_MANAGER.current_song_index == MUSIC_MANAGER.current_main_theme)
+                music_write_main_track_position()
+            music_play(new_music)
+            music_duck(1, 0)
+            MUSIC_MANAGER.current_minit_part = global.minit_music_part
+        }
+        else if (MUSIC_MANAGER.current_song_index != old_music)
+        {
+            if (MUSIC_MANAGER.current_song_index == MUSIC_MANAGER.current_main_theme)
+                music_write_main_track_position()
+            music_play(old_music)
+            music_duck(1, 0)
+        }
+    }
+}
+else if instance_exists(obj_save_point)
 {
     with (obj_save_point)
     {
@@ -531,11 +572,7 @@ if instance_exists(obj_save_point)
             music_xfade(SaveSong, 2000)
         }
         else if (MUSIC_MANAGER.current_song_index != MUSIC_MANAGER.current_main_theme)
-        {
-            music_xfade(MUSIC_MANAGER.current_main_theme, 2000)
-            music_reset_track_position()
-            music_duck(1, 2000)
-        }
+            music_play_main(1)
     }
 }
 else if instance_exists(obj_orb)
@@ -552,10 +589,6 @@ else if instance_exists(obj_orb)
     }
 }
 else if (MUSIC_MANAGER.current_song_index != MUSIC_MANAGER.current_main_theme)
-{
-    music_xfade(MUSIC_MANAGER.current_main_theme, 2000)
-    music_reset_track_position()
-    music_duck(1, 2000)
-}
+    music_play_main(1)
 with (obj_controller)
     event_perform(ev_other, ev_user0)

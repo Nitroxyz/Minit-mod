@@ -12,7 +12,8 @@ if t_flag
         {
             flag = 1
             catmood_update(2, 60)
-            music_duck(0, 0)
+            if minit_music_inactive()
+                music_duck(0, 0)
             if (get_room_state() == 2)
             {
                 if (!override_enemy_destroy)

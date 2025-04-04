@@ -39,7 +39,6 @@ else
     _seconds = string_replace_all(_seconds, " ", "0")
     _timestring = _hours + ":" + _minutes + ":" + _seconds
     draw_text(214, 220, _timestring)
-    draw_text(214, 220, "HI")
 }
 if (!ui_is_initialized)
 {

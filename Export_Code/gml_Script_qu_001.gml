@@ -44,6 +44,8 @@ switch state_step
         {
             set_room_state(0)
             player_auto()
+            if (global.minit_mode > 0)
+                instance_create_depth(0, 0, -10000, minit_ItemGot)
             qu_wait(30)
         }
         else if instance_exists(obj_changeroom)
@@ -69,8 +71,24 @@ switch state_step
             obj_player.key_left = 1
         break
     case 8:
-        hud_text_set(38, 358, 2)
-        qu_wait(5)
+        if (global.minit_mode > 0)
+        {
+            if (!instance_exists(minit_ItemGot))
+            {
+                player_play()
+                qu_reset()
+                hud_text_reset()
+                music_duck(1, 1000)
+                set_room_state(0)
+                save_savefile()
+                global.events_completed++
+            }
+        }
+        else
+        {
+            hud_text_set(38, 358, 2)
+            qu_wait(5)
+        }
         break
     case 9:
         if qu_trigger()
@@ -144,6 +162,7 @@ switch state_step
             hud_text_reset()
             music_duck(1, 1000)
             set_room_state(0)
+            global.minit_active = 1
             save_savefile()
             global.events_completed++
         }

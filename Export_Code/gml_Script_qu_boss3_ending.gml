@@ -23,9 +23,7 @@ switch state_step
     case 2:
         if qu_trigger()
         {
-            music_xfade(MUSIC_MANAGER.current_main_theme, 2000)
-            music_reset_track_position()
-            music_duck(0.5, 2000)
+            music_play_main(0.5)
             hud_text_set(221, 358, 2)
             qu_wait(1)
         }

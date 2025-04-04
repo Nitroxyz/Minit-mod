@@ -22,7 +22,7 @@ j_start = (keyboard_check_pressed(vk_return) || gamepad_button_check_pressed(glo
 j_select = (keyboard_check_pressed(global.keybinding_dash_key) || gamepad_button_check_pressed(global.controller_slot, gp_select))
 j_debug = ((gamepad_button_check(global.controller_slot, gp_face4) && gamepad_button_check(global.controller_slot, gp_select)) || keyboard_check(vk_down))
 j_skip = (j_a && j_y)
-if keyboard_check_pressed(ord("R"))
-    global.minit_time = -60
+if (global.minit_mode > 0 && keyboard_check_pressed(ord("R")))
+    global.minit_reset = 1
 var totalButtons = j_a + j_b + j_x + j_y + j_left + j_right + j_up + j_down + j_start
 return totalButtons;

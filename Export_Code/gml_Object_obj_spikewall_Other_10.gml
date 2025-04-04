@@ -87,9 +87,7 @@ else
         mousesprite = 0
         instance_create((x - 24), (y - 24), obj_hidecloud)
         x = obj_camera.xmax + 10
-        music_xfade(MUSIC_MANAGER.current_main_theme, 2000)
-        music_reset_track_position()
-        music_duck(1, 2000)
+        music_play_main(1)
         is_active = 0
         shake_screen(30)
         audio_play_sound(snd_torpedo_explode, 100, false)

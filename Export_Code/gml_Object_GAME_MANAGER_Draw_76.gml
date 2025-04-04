@@ -1,0 +1,6 @@
+if (!surface_exists(global.playersurf))
+    global.playersurf = surface_create(308, 196)
+if surface_set_target(global.playersurf)
+    draw_clear_alpha(c_black, 0)
+camera_apply(view_camera[0])
+surface_reset_target()

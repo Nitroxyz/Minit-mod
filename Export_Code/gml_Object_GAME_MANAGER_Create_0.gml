@@ -9,8 +9,11 @@ csv_debug = 0
 rooms = -1
 timesincelastinput = 0
 second_timer = 60
+minit_reset_timer = 1
 if (!surface_exists(global.hudsurf))
     global.hudsurf = surface_create(304, 192)
+if (!surface_exists(global.playersurf))
+    global.playersurf = surface_create(308, 196)
 if (instance_number(GAME_MANAGER) > 1)
 {
     instance_destroy()

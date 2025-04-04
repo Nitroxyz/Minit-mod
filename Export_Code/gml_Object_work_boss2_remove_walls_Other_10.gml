@@ -36,18 +36,12 @@ switch state
             while ((!(position_meeting(xcur, ycur, obj_wall))) || position_meeting(xcur, ycur, obj_wall2))
             {
                 if (xcur < 296)
-                {
                     xcur += 8
-                    continue
-                }
                 else
                 {
                     xcur = 8
                     if (ycur > 0)
-                    {
                         ycur -= 8
-                        continue
-                    }
                     else
                         flag = 1
                 }
@@ -55,18 +49,12 @@ switch state
             while ((!(position_meeting(xcur2, ycur2, obj_wall))) || position_meeting(xcur2, ycur2, obj_wall2))
             {
                 if (xcur2 < 296)
-                {
                     xcur2 += 8
-                    continue
-                }
                 else
                 {
                     xcur2 = 8
                     if (ycur2 < 192)
-                    {
                         ycur2 += 8
-                        continue
-                    }
                     else
                         flag = 1
                 }
@@ -270,9 +258,7 @@ switch state
                 with (obj_boss2_seg_wall)
                     instance_destroy()
                 instance_destroy()
-                music_xfade(MUSIC_MANAGER.current_main_theme, 2000)
-                music_reset_track_position()
-                music_duck(1, 2000)
+                music_play_main(1)
             }
         }
         break

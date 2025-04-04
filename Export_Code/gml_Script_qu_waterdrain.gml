@@ -22,10 +22,8 @@ switch state_step
             else if (global.water_level == 3)
             {
                 state_step = 21
-                MUSIC_MANAGER.current_main_theme = mu_water_drained
-                music_xfade(MUSIC_MANAGER.current_main_theme, 2000)
-                music_reset_track_position()
-                music_duck(0.5, 2000)
+                MUSIC_MANAGER.current_main_theme = 16
+                music_play_main(0.5)
             }
         }
         else if (!instance_exists(obj_shake))

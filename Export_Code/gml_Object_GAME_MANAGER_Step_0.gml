@@ -12,6 +12,15 @@ else
     if (!buttons)
         timesincelastinput++
 }
+if (global.minit_reset == 1)
+{
+    minit_reset_timer--
+    if (minit_reset_timer == 0)
+    {
+        minit_reset_timer = 1
+        global.minit_time--
+    }
+}
 if j_debug
 {
     if (debug_reset_timer < 180)

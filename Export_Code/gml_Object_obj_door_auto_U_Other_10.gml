@@ -7,7 +7,7 @@ switch state
             {
                 if (global.allow_cat_doors || obj_player.cat == 0)
                 {
-                    if (dont_play_lockmusic == 0)
+                    if (dont_play_lockmusic == 0 && minit_music_inactive())
                         music_duck(0, 500)
                     obj_player.control_state = 74
                     with (obj_door_auto_U)

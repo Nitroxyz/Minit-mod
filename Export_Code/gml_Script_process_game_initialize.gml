@@ -1,6 +1,14 @@
 audio_group_load(1)
 global.playtime = 0
 global.minit_time = 0
+global.minit_active = 0
+global.minit_reset = 0
+global.minit_mode = 2
+global.minit_music_mode = 0
+global.minit_music_part = 1
+global.playersurf = -1
+global.game_width = 308
+global.game_height = 196
 global.vacant_suit_room = -1
 global.vacant_suit_x = undefined
 global.vacant_suit_y = undefined

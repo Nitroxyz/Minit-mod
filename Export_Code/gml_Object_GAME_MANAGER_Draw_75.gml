@@ -22,8 +22,21 @@ if (room != r_editor)
     if surface_exists(global.hudsurf)
         draw_surface(global.hudsurf, (sx + 2), (sy + 2))
     else
-        global.hudsurf = surface_create(sw, sh)
+        global.hudsurf = surface_create((sw - 4), (sh - 4))
     draw_frame4_blackinner(sx, sy, (sx + sw), (sy + sh))
+    if (state != 19)
+    {
+        with (minit_ItemGot)
+        {
+            if instance_exists(obj_player)
+            {
+                x = sx + obj_player.x
+                y = sy + obj_player.y
+            }
+            event_perform(ev_draw, 0)
+            draw_surface_stretched(global.playersurf, sx, sy, sw, sh)
+        }
+    }
     surface_reset_target()
     if t_visible
     {
