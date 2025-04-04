@@ -1,0 +1,15 @@
+if (circle_radius > 0)
+{
+    draw_set_blend_mode(bm_max)
+    draw_circle((x + sprite_width / 2), (y + sprite_height / 2), circle_radius, 0)
+    draw_self()
+    draw_set_blend_mode(bm_normal)
+    var v_x = __view_get(0, 0)
+    var v_y = __view_get(1, 0)
+    draw_set_color(c_black)
+    draw_rectangle(v_x, v_y, (v_x + 427), (y - 1), false)
+    draw_rectangle(v_x, y, (x - 1), (y + sprite_height), false)
+    draw_rectangle((x + sprite_width), y, (v_x + 427), (y + sprite_height), false)
+    draw_rectangle(v_x, (y + sprite_height), (v_x + 427), (v_y + 240), false)
+    draw_set_color(c_white)
+}

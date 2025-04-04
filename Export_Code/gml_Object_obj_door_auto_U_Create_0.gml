@@ -1,0 +1,17 @@
+sprite_index = spr_door1_U
+image_speed = 0
+iindex = 0
+visible = false
+upper = -1
+lower = -1
+on_side = 0
+master = 0
+dont_play_lockmusic = 0
+state = 0
+trigger = 127
+unhide_event = 692
+flag = 0
+override_enemy_destroy = 0
+method[0] = -1
+arguments[0] = -1
+c_destroy = 0

@@ -1,0 +1,5 @@
+with (arm1)
+    instance_create((x - 12), y, obj_boss2_mine)
+with (arm2)
+    instance_create((x - 12), y, obj_boss2_mine)
+shake_screen(10)

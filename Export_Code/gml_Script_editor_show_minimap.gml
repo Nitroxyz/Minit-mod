@@ -1,0 +1,7 @@
+prop_button[0] = instance_create(prop_pane_x, prop_pane_y, obj_editor_cbox_mapdoor_u)
+prop_button[1] = instance_create(prop_pane_x, (prop_pane_y + 10), obj_editor_cbox_mapdoor_d)
+prop_button[2] = instance_create(prop_pane_x, (prop_pane_y + 20), obj_editor_cbox_mapdoor_l)
+prop_button[3] = instance_create(prop_pane_x, (prop_pane_y + 30), obj_editor_cbox_mapdoor_r)
+prop_button[4] = instance_create(prop_pane_x, (prop_pane_y + 40), obj_editor_cbox_mapdoor_s)
+prop_button[5] = instance_create(prop_pane_x, (prop_pane_y + 50), obj_editor_cbox_mapdoor_e)
+prop_button[6] = instance_create(prop_pane_x, (prop_pane_y + 60), obj_editor_minimap)

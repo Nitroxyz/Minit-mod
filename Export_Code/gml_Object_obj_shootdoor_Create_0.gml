@@ -1,0 +1,15 @@
+destruct = 0
+image_speed = 0
+bubble = -1
+depth = 0
+init = 1
+sprite_index = spr_shootdoorframe
+method[0] = -1
+arguments[0] = -1
+c_destroy = 0
+depth = -10
+iindex = 0
+state = 0
+bubble = -1
+timer_max = 45
+timer = timer_max

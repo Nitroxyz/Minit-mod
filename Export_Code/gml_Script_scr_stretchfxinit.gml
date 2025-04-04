@@ -1,0 +1,10 @@
+depth = -2
+stretchv = 0.022
+wid = sprite_width / 16
+hei = sprite_height / 16
+stretchangle = random_range(0, 500)
+stretchcur = 0.33 + 0.02 * cos(stretchangle)
+thirdwid = sprite_width / 3
+thirdhei = sprite_height / 3
+startx = x - sprite_get_xoffset(sprite_index)
+starty = y - sprite_get_yoffset(sprite_index)

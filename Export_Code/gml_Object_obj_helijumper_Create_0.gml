@@ -1,0 +1,22 @@
+event_inherited()
+state = 394
+init_state = state
+hp = 7
+stun_state = 317
+walk_time = 120
+timer = walk_time
+hitsound = 361
+stun_sprite = 543
+iindex = 0
+image_speed = 0.2
+grounded = 1
+hspd = 0
+vspd = 0
+grav = 0.2
+jump_height = -4
+helicopter_force = -0.25
+helicopter_threshold = 1.25
+helicopter_time = 70
+helicopter_time_max = helicopter_time
+helicopter_active = 0
+has_used_helicopter = 0

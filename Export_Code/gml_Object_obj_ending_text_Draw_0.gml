@@ -1,0 +1,5 @@
+draw_set_font(global.font[global.language])
+draw_set_color(c_white)
+draw_set_halign(fa_center)
+for (var i = 0; i < cur_step; i++)
+    draw_text((room_width / 2 + (random_range((-shake[i]), shake[i]))), (room_height * 0.2 + 14 * i + (random_range((-shake[i]), shake[i]))), message[i])

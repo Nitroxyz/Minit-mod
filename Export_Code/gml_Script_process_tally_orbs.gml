@@ -1,0 +1,16 @@
+var abil = ds_map_find_value(argument1, "abilities")
+var guneq = ds_map_find_value(argument1, "gunequip")
+var cool_got = ds_map_find_value(argument1, "rocket_cost") < 0.5
+var deco_got = ds_map_find_value(argument1, "decoder_complete")
+var success_got = ds_map_find_value(argument1, "success")
+var complete_got = real(ds_map_find_value(argument1, "completion")) > 99
+fselect_rocket[argument0] = get_bitwise_flag(abil, 1)
+fselect_cooler[argument0] = cool_got
+fselect_spinjump[argument0] = get_bitwise_flag(abil, 2)
+fselect_dash[argument0] = get_bitwise_flag(abil, 4)
+fselect_hopper[argument0] = get_bitwise_flag(abil, 16)
+fselect_bigshot[argument0] = get_bitwise_flag(guneq, 1)
+fselect_repeater[argument0] = get_bitwise_flag(guneq, 8)
+fselect_decoder[argument0] = deco_got
+fselect_success[argument0] = success_got
+fselect_complete[argument0] = complete_got

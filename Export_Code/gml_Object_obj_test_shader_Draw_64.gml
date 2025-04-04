@@ -1,0 +1,5 @@
+shader_set(shader_rgb_shift)
+var o = shader_get_uniform(shader_rgb_shift, "u_uOffset")
+shader_set_uniform_f_array(o, offset)
+draw_surface_stretched(application_surface, 0, 0, window_get_width(), window_get_height())
+shader_reset()

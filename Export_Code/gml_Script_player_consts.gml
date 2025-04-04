@@ -1,0 +1,16 @@
+cat_movespd = 2.5
+cat_jumpspd = 4.5
+cat_grav = 0.235
+cat_accel = 0.25
+cat_air_drag = 0.05
+cat_climbspd = 3
+cat_jumpoffset = 0.5
+mech_movespd = 2.5
+mech_jumpspd = 4.5
+mech_grav = 0.235
+mech_accel = 0.2
+mech_air_drag = 0.1
+shoot_slow = 0.5
+sub_movespd = 2.4
+sub_accel = 0.1
+sub_drag = 0.01

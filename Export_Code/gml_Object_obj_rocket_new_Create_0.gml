@@ -1,0 +1,17 @@
+bulletdir = ""
+c_destroy = 0
+flag = 0
+image_speed = 1.5
+hspd = 0
+vspd = 0
+alarm[0] = 8
+init = 1
+atk = 5
+spd = 0
+target_spd = 9
+bullet_acceleration = 0.5
+timer = 8
+iindex = 0
+trail_timer[0] = 1
+trail_timer[1] = -1
+trail_timer[2] = -1

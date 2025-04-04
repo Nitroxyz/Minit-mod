@@ -1,0 +1,14 @@
+timeline_cur = 0
+timeline_cur_real = 0
+timeline_layer_cur = 0
+timeline_layer_count = 0
+timeline_length = 0
+timeline_layer_asset = -1
+timeline_layer_name = -1
+timeline_layer_iindex = -1
+timeline_layer_x = -1
+timeline_layer_y = -1
+timeline_layer_rotation = -1
+timeline_layer_flip = -1
+timeline_layer_sound = -1
+timeline_layer_effect = -1

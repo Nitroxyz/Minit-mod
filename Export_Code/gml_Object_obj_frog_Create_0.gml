@@ -1,0 +1,26 @@
+event_inherited()
+state = 319
+idle_timer_max = 60
+idle_timer = idle_timer_max * 0.25
+jumpheight = 4
+grav = 0.2
+hp = 2
+init_state = 319
+stun_sprite = 327
+gibs_sprite = 280
+float_y = y
+angle = 0
+angle_speed = 0.05235987755982988
+current_hop = 0
+jumpheight[0] = 4
+jumpheight[1] = 5
+jumpdist[0] = 2
+jumpdist[1] = 1
+jumpsfx[0] = 46
+jumpsfx[1] = 49
+hitsound = 50
+hspd = 0
+vspd = 0
+var _index = instance_number(obj_frog) - 1
+idle_timer = idle_timer_max * 0.25 + _index * 30
+initialized = 0

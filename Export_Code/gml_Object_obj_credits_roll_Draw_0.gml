@@ -1,0 +1,7 @@
+draw_set_color(c_white)
+draw_set_halign(fa_center)
+draw_set_valign(fa_top)
+draw_set_font(global.font[global.language])
+draw_text(x, y, scroll_header)
+draw_set_font(fnt_nesultra)
+draw_text(x, y, scroll_text)

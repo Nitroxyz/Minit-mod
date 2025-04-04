@@ -1,0 +1,10 @@
+view_enabled[0] = true
+__view_set(10, 0, true)
+__view_set(0, 0, -2)
+__view_set(1, 0, -2)
+__view_set(2, 0, 276)
+__view_set(3, 0, 180)
+__view_set(11, 0, 0)
+__view_set(12, 0, 0)
+__view_set(13, 0, 276)
+__view_set(14, 0, 180)

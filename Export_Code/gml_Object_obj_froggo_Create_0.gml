@@ -1,0 +1,22 @@
+event_inherited()
+image_speed = 0.1
+grounded = 0
+hspd = 0
+vspd = 0
+float_x = 0
+float_y = 0
+sin_ticker = 0
+movespeed = 0.4
+hdir = (random_range(0.5, 1)) * (choose(1, -1))
+vdir = (random_range(0.5, 1)) * (choose(1, -1))
+stun = 0
+hp_max = 3
+hp = 3
+stuntimer = 10
+hitsound = 52
+jump_timer = 60
+xtemp = x
+ytemp = y
+state = 351
+init_state = 351
+pause_state = 2

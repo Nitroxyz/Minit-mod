@@ -1,0 +1,21 @@
+event_inherited()
+sprite_index = spr_boss2_mine
+tick_timer = 180
+tick_timer_mod_value = (tick_timer div 10) + 1
+c_destroy = 0
+hp = 5
+dir = 180
+hspd = 0
+vspd = 0
+spd = 2
+target_spd = -0.75
+accel = 0.025
+iindex = 0
+destroyontouch = 1
+stuntimer = 2
+active = 0
+makesound = 0
+mag = 4
+angle = instance_number(obj_mine) * pi / 2
+angle_speed = 0.10471975511965977
+drift_delay = 20

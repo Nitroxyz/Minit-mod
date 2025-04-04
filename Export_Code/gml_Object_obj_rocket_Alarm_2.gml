@@ -1,0 +1,16 @@
+var temp = instance_create(((x + xprevious) / 2), ((y + yprevious) / 2), obj_rocketrail)
+temp.image_angle = image_angle
+image_index = 1
+temp.depth = depth + 1
+temp = instance_create(xprevious, yprevious, obj_rocketrail)
+temp.image_angle = image_angle
+image_index = 2
+temp.depth = depth + 2
+temp = instance_create(x, y, obj_rocketrail)
+temp.image_angle = image_angle
+temp.depth = depth + 1
+hspd = sign(hspd) * (abs(hspd * 1.34))
+vspd = sign(vspd) * (abs(vspd * 1.34))
+temp = instance_create(xprevious, yprevious, obj_dustcloud)
+temp.image_speed *= 2
+alarm[0] = 4

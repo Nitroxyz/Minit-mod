@@ -1,0 +1,14 @@
+leftopen = 0
+button[12].image_blend = c_white
+rightopen = 0
+button[13].image_blend = c_white
+upopen = 0
+button[14].image_blend = c_white
+downopen = 0
+button[15].image_blend = c_white
+mapdoor_u = 0
+mapdoor_r = 0
+mapdoor_l = 0
+mapdoor_d = 0
+mapdoor_s = 0
+mapdoor_e = 0

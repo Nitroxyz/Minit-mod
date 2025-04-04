@@ -1,0 +1,7 @@
+if (fs_override == 0)
+    ds_grid_set(menu, 0, 0, loc_read_line(546))
+ds_grid_set(menu, 0, (1 + fs_override), loc_read_line(543))
+ds_grid_set(menu, 0, (2 + fs_override), loc_read_line(545))
+ds_grid_set(menu, 0, (3 + fs_override), loc_read_line(544))
+ds_grid_set(menu, 0, (4 + fs_override), loc_read_line(564))
+ds_grid_set(menu, 0, (5 + fs_override), loc_read_line(549))

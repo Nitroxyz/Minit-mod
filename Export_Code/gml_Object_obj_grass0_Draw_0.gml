@@ -1,0 +1,5 @@
+draw_sprite_part_ext(sprite_index, iindex, 0, 0, 16, 9, (draw_offset_x + x - 8.5 + 2.5 * cos(ang) + xoffset), (draw_offset_y + y - 8 * image_yscale), 1, image_yscale, image_blend, 1)
+draw_sprite_part_ext(sprite_index, iindex, 0, 9, 16, 6, (x - 8.5 + 2 * (cos(ang + 0.5235987755982988)) + xoffset * 0.75), (y + image_yscale * 1), 1, image_yscale, image_blend, 1)
+draw_sprite_part_ext(sprite_index, abs(floor(iindex) - 1), 0, 15, 16, 6, (x - 9 + 1.5 * (cos(ang + 1.0471975511965976)) + xoffset * 0.5), (y + image_yscale * 7), 1, image_yscale, image_blend, 1)
+draw_sprite_part_ext(sprite_index, iindex, 0, 21, 16, 6, (x - 8.5 + 1 * (cos(ang + 1.5707963267948966)) + xoffset * 0.25), (y + image_yscale * 13), 1, image_yscale, image_blend, 1)
+draw_sprite_part_ext(sprite_index, iindex, 0, 27, 16, 5, (x - 8), (y + image_yscale * 19), 1, image_yscale, image_blend, 1)

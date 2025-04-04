@@ -1,0 +1,15 @@
+key_right = 0
+key_left = 0
+key_down = 0
+key_up = 0
+key_jump = 0
+key_jump_held = 0
+key_action = 0
+key_shoot = 0
+key_shoot_release = 0
+key_jump_release = 0
+key_shoot2 = 0
+key_shoot2held = 0
+key_shoot3 = 0
+key_dash = 0
+key_dismount = 0

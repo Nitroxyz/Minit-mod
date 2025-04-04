@@ -1,0 +1,25 @@
+event_inherited()
+image_speed = 0.1
+grounded = 0
+dir = choose(1, -1)
+hspd = 0.5 * dir
+vspd = 0
+xtemp = x
+ytemp = y
+angle = 0
+stun = 0
+hp = 16
+stuntimer = 5
+hitsound = 314
+stun_sprite = 269
+stun_state = 312
+state = 360
+init_state = 360
+pause_state = 2
+visible = false
+patrol_timer_max = 180
+patrol_timer = 45 * instance_number(obj_grenadier)
+shoot_timer_max = 60
+shoot_timer = shoot_timer_max
+shoot_count = 2
+iindex = 0

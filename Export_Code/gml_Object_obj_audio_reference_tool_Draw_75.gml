@@ -1,0 +1,6 @@
+draw_set_color(c_lime)
+draw_set_halign(fa_left)
+draw_text(20, 8, audio_get_name(audio_cur))
+draw_text(20, 18, string(audio_level))
+draw_text(20, 28, string(audio_cur))
+draw_set_color(c_white)

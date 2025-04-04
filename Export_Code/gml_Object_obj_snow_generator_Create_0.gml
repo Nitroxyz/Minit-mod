@@ -1,0 +1,9 @@
+timer_front = 27
+timer_front_max = timer_front
+timer_back = 40
+timer_back_max = timer_back
+active = 1
+angle = 0
+drift = 0
+drift_speed = 0.2
+counter = 1

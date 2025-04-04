@@ -1,0 +1,10 @@
+bulletdir = ""
+flag = 0
+image_speed = 1.5
+hspd = 0
+vspd = 0
+alarm[0] = 8
+init = 1
+atk = 1
+timer = 8
+iindex = 0

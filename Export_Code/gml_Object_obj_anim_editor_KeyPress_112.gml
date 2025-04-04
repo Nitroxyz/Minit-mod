@@ -1,0 +1,1 @@
+anim_editor_create_anim_from_copy("anim_hotboy_talk")

@@ -1,0 +1,1 @@
+switch_save_data_mount(global.player_switch_account)

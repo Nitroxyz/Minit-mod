@@ -1,0 +1,9 @@
+global.keybinding_up_key = 38
+global.keybinding_down_key = 40
+global.keybinding_left_key = 37
+global.keybinding_right_key = 39
+global.keybinding_jump_key = 90
+global.keybinding_shoot_key = 88
+global.keybinding_rocket_key = 67
+global.keybinding_dash_key = 32
+global.keybinding_eject_key = 16

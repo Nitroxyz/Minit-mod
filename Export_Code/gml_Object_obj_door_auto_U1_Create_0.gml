@@ -1,0 +1,13 @@
+sprite_index = spr_door1_U
+image_speed = 0
+visible = false
+upper = -1
+lower = -1
+master = 0
+alarm[0] = 1
+state = 0
+trigger = 2
+flag = 0
+method[0] = -1
+arguments[0] = -1
+c_destroy = 0

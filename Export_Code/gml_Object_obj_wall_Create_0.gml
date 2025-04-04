@@ -1,0 +1,12 @@
+destruct = 0
+open_hp = -1
+shake_max = 10
+depth = 5
+method[0] = -1
+arguments[0] = -1
+c_destroy = 0
+hitsound = 82
+rot = 0
+rotx = rot
+roty = rot
+iindex = 0

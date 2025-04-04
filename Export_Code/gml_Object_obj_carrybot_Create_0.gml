@@ -1,0 +1,20 @@
+event_inherited()
+hp = 10
+iindex = 0
+holdingObject = obj_carrybot_bomb
+holdingSprite = object_get_sprite(holdingObject)
+dropped_obj = -1
+hasObject = 1
+regen_timer = 240
+regen_timer_max = regen_timer
+trigger_distance = 32
+state = 382
+init_state = state
+stun_sprite = 254
+hitsound = 309
+hspd = 0
+vspd = 0
+flyspeed[0] = 1.5
+flyspeed[1] = 1
+sin_timer = 0
+flying_audio = undefined

@@ -1,0 +1,22 @@
+event_inherited()
+image_speed = 0.05
+hspd = 0
+vspd = 0
+movespeed = 0.4
+hdir = (random_range(0.5, 1)) * (choose(1, -1))
+vdir = (random_range(0.5, 1)) * (choose(1, -1))
+hspd = hdir
+vspd = vdir
+stun = 0
+stuntimer = 10
+hp = 4
+swim_force = 1
+swim_drag = 0.02
+swim_timer = 120
+alarm[1] = 90
+tar_x = 0
+tar_y = 0
+state = 347
+init_state = 347
+pause_state = 2
+stun_sprite = 283

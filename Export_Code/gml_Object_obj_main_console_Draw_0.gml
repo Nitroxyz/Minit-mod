@@ -1,0 +1,5 @@
+draw_self()
+draw_sprite(spr_main_console_icons, blink, (x - 16), (y - 32))
+draw_sprite(spr_main_console_icons, (blink + icon[0]), (x - 16), y)
+draw_sprite(spr_main_console_icons, (blink + icon[1]), x, y)
+draw_sprite(spr_main_console_icons, (blink + icon[2]), (x + 16), y)

@@ -1,0 +1,10 @@
+fselect_rocket[argument0] = 0
+fselect_cooler[argument0] = 0
+fselect_spinjump[argument0] = 0
+fselect_dash[argument0] = 0
+fselect_hopper[argument0] = 0
+fselect_bigshot[argument0] = 0
+fselect_repeater[argument0] = 0
+fselect_decoder[argument0] = 0
+fselect_success[argument0] = 0
+fselect_complete[argument0] = 0

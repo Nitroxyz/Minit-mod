@@ -1,0 +1,12 @@
+circle_x = xstart - 48
+circle_y = circle_ystart
+circle_r = circle_rstart / 2.5
+circle_angle = 70
+circle_angle_speed = circle_angle_speed_o
+state = 446
+shoot_repeat = 30
+shoot_repeat_max = shoot_repeat
+pause_state = state
+init_state = state
+circletimer = 360
+drifttimer = 35

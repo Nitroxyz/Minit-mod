@@ -1,0 +1,19 @@
+draw_set_font(global.font[global.language])
+button_icon_offset = 0
+voice = -1
+dialog_portrait_index = 0
+dialog = ""
+dialogtemp = ""
+dialogsound = -1
+dialogfeedtimer = 0
+dialogchatcounter = 0
+dialogsnapped = 0
+dialogposition = 0
+hudhide = 0
+hpreadout = 0
+dialog_style = "normal"
+dialog_style_wavy_angle = 0
+dialog_style_wavy_mag = 1
+dialog_style_wavy_spread = 0.5
+dialog_style_wavy_speed = 0.05
+dpos = 150

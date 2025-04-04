@@ -1,0 +1,9 @@
+depth = 12
+hspd = random_range(-2, 2)
+vspd = random_range(-1, 2)
+h_decel = 0.1
+v_decel = 0.15
+image_xscale = 0.5
+image_yscale = 0.5
+image_speed = random_range(0.5, 1)
+iindex = 1

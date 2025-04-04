@@ -1,0 +1,9 @@
+hspd = 0
+vspd = 0
+image_speed = 0
+image_index = choose(3, 2)
+image_xscale = choose(1, -1)
+size = random_range(7, 9)
+alarm[0] = 1
+wobble = 0
+visible = false

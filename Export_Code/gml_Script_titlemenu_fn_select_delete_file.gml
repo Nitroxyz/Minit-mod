@@ -1,0 +1,12 @@
+new_game = 0
+state = 3
+audio_play_sound(snd_menu_select, 5, false)
+sub_cursor_index = 1
+sub_entries = 2
+fselectoptions_header = loc_read_line(559)
+fselectoptions = -1
+fselectoptions_text = -1
+fselectoptions_text[0] = loc_read_line(560)
+fselectoptions[0] = 639
+fselectoptions_text[1] = loc_read_line(561)
+fselectoptions[1] = 633

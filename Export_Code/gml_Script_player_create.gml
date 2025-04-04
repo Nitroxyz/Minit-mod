@@ -1,0 +1,10 @@
+cat = 0
+hassuit = 1
+stopped = 0
+old_image_speed = image_speed
+shoot_state = 84
+old_shoot_state = shoot_state
+move_state = 66
+old_move_state = move_state
+control_state = 87
+collision_state = 58

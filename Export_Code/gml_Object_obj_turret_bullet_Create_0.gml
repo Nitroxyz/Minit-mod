@@ -1,0 +1,15 @@
+bulletdir = ""
+flag = 0
+image_speed = 1.5
+hspd = 0
+vspd = 0
+alarm[0] = 7
+init = 1
+atk = 1
+spd = 0
+target_spd = 7
+timer = 24
+iindex = 0
+trail_particle = 19
+audio_play_sound(snd_small_gun, 1, false)
+audio_sound_pitch(snd_small_gun, random_range(0.9, 1.1))
