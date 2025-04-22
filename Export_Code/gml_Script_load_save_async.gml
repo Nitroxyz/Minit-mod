@@ -50,10 +50,7 @@ global.hassuit = ds_map_find_value(loaded_data, "hassuit")
 global.items_collected = ds_map_find_value(loaded_data, "collected")
 global.events_completed = ds_map_find_value(loaded_data, "events")
 if ((!global.respawn_mode) && ds_map_exists(loaded_data, "playtime"))
-{
     global.playtime = ds_map_find_value(loaded_data, "playtime")
-    minit_time_set()
-}
 var glist = ds_map_find_value(loaded_data, "getlist")
 if ds_exists(global.getlist, 2)
     ds_list_clear(global.getlist)
@@ -69,3 +66,20 @@ global.current_room = roomtar
 global.spawn_x = real(spawnx)
 global.spawn_y = real(spawny)
 set_default_music_vols()
+if (ds_map_exists(loaded_data, "minit_version") && ds_map_find_value(loaded_data, "minit_version") == global.minit_version)
+    global.minit_active = ds_map_find_value(loaded_data, "minit_active")
+else
+    global.minit_active = 1
+if (global.minit_mode > 0)
+{
+    if global.minit_active
+        minit_time_set()
+    if (!global.respawn_mode)
+        minit_set_music()
+    else if (global.minit_music_mode > 1)
+    {
+        global.minit_music_part++
+        if (global.minit_music_part > 4)
+            global.minit_music_part = 1
+    }
+}

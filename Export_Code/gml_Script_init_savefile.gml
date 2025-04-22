@@ -95,8 +95,6 @@ else
     ds_map_add(map, "spawn_y", string(global.spawn_y))
 }
 global.playtime = 0
-global.minit_time = 0
-global.minit_active = 0
 global.items_collected = 0
 global.events_completed = 0
 global.flows_cleared = 0
@@ -120,6 +118,11 @@ global.rebba_quest_complete_2 = 0
 global.gary_defeated = 0
 global.gunEquip = 0
 global.endgame = 0
+global.minit_time = 0
+global.minit_active = 0
+global.minit_music_mode = 0
+ds_map_add(map, "minit_active", string(global.minit_active))
+ds_map_add(map, "minit_version", global.minit_version)
 if ds_map_exists(map, "getlist")
     ds_map_delete(map, "getlist")
 if ds_exists(global.getlist, 2)

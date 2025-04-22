@@ -22,8 +22,11 @@ switch state_step
             else if (global.water_level == 3)
             {
                 state_step = 21
-                MUSIC_MANAGER.current_main_theme = 16
-                music_play_main(0.5)
+                if minit_music_inactive()
+                {
+                    MUSIC_MANAGER.current_main_theme = 16
+                    music_play_main(0.5)
+                }
             }
         }
         else if (!instance_exists(obj_shake))

@@ -20,7 +20,7 @@ j_b_up = (keyboard_check_released(global.keybinding_rocket_key) || gamepad_butto
 j_y_up = (keyboard_check_released(global.keybinding_eject_key) || gamepad_button_check_released(global.controller_slot, gp_face4))
 j_start = (keyboard_check_pressed(vk_return) || gamepad_button_check_pressed(global.controller_slot, gp_start))
 j_select = (keyboard_check_pressed(global.keybinding_dash_key) || gamepad_button_check_pressed(global.controller_slot, gp_select))
-j_debug = ((gamepad_button_check(global.controller_slot, gp_face4) && gamepad_button_check(global.controller_slot, gp_select)) || keyboard_check(vk_down))
+j_debug = (gamepad_button_check(global.controller_slot, gp_face4) && gamepad_button_check(global.controller_slot, gp_select))
 j_skip = (j_a && j_y)
 if (global.minit_mode > 0 && keyboard_check_pressed(ord("R")))
     global.minit_reset = 1

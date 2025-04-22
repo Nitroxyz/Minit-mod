@@ -22,7 +22,12 @@ if (button != self)
         }
     }
 }
-if (enterOnly == 0)
+if (!instance_exists(obj_player))
+{
+    if audio_is_playing(Elevator)
+        audio_stop_sound(Elevator)
+}
+else if (enterOnly == 0)
 {
     switch state
     {

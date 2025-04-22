@@ -162,7 +162,8 @@ switch state_step
             hud_text_reset()
             music_duck(1, 1000)
             set_room_state(0)
-            global.minit_active = 1
+            if (global.minit_mode > 0)
+                global.minit_active = 1
             save_savefile()
             global.events_completed++
         }

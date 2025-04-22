@@ -3,6 +3,7 @@ global.playtime = 0
 global.minit_time = 0
 global.minit_active = 0
 global.minit_reset = 0
+global.minit_version = "4.0-1"
 global.minit_mode = 2
 global.minit_music_mode = 0
 global.minit_music_part = 1

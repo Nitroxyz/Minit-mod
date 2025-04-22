@@ -17,26 +17,13 @@ for (var map_cur = 0; map_cur < array_length_1d(global.room_states); map_cur++)
     map_cur_ds_string = json_encode(global.room_discovery[map_cur])
     ds_map_set(map, ("map_discovery" + string(map_cur)), map_cur_ds_string)
 }
-if (MAP_MANAGER.map_current == "map1" && global.current_room == "2008")
+if (global.minit_mode > 0)
 {
-    global.minit_music_mode = 1
-    global.minit_music_part = 1
+    minit_set_music()
+    ds_map_set(map, "minit_active", global.minit_active)
 }
-else if (MAP_MANAGER.map_current == "map1" && global.current_room == "2410")
-{
-    global.minit_music_mode = 2
-    global.minit_music_part = 0
-}
-else if (MAP_MANAGER.map_current == "map6" && global.current_room == "2219")
-{
-    global.minit_music_mode = 3
-    global.minit_music_part = 1
-}
-else
-{
-    global.minit_music_mode = 0
-    global.minit_music_part = 0
-}
+if (global.minit_mode == 1)
+    minit_time_set()
 global.room_start = global.current_room
 ds_map_set(map, "map_start", MAP_MANAGER.map_current)
 ds_map_set(map, "room_start", global.current_room)
