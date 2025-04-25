@@ -37,6 +37,8 @@ if (room != r_editor)
             draw_surface_stretched(global.playersurf, sx, sy, sw, sh)
         }
     }
+    draw_text_outline(33, (50 + global.ui_text_offset), audio_sound_get_gain(sndMinitSing))
+    draw_text_outline(33, (70 + global.ui_text_offset), audio_sound_get_gain(MUSIC_MANAGER.current_song))
     surface_reset_target()
     if t_visible
     {

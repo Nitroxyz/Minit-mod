@@ -545,7 +545,7 @@ if (!minit_music_inactive())
             new_music = MUSIC_MANAGER.mus_forest[global.minit_music_part]
             old_music = MUSIC_MANAGER.mus_forest[MUSIC_MANAGER.current_minit_part]
         }
-        if (MUSIC_MANAGER.current_minit_part != global.minit_music_part && MUSIC_MANAGER.current_song_index != new_music)
+        if (MUSIC_MANAGER.current_song_index != new_music)
         {
             if (MUSIC_MANAGER.current_song_index == MUSIC_MANAGER.current_main_theme)
                 music_write_main_track_position()
@@ -561,6 +561,7 @@ if (!minit_music_inactive())
             music_duck(1, 0)
         }
     }
+    music_duck(1, 0)
 }
 else if instance_exists(obj_save_point)
 {

@@ -32,6 +32,11 @@ if (!audio_is_playing(UIpausehum))
     audio_play_sound(UIpausehum, 100, true)
 ducklevel = MUSIC_MANAGER.music_gain_multiplier
 music_duck((ducklevel * 0), 500)
+with (MUSIC_MANAGER)
+{
+    if (current_song != undefined)
+        audio_sound_gain(current_song, 0, 500)
+}
 exiting = 0
 buttons_previous = get_input()
 page_control = 1
